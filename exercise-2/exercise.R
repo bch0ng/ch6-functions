@@ -15,9 +15,11 @@ CompareLength(c(1,2,3), c(1,2,3,4))
 DescribeDifference <- function(a, b) {
   diff <- length(a) - length(b)
   if (diff > 0) {
-    sentence <- (paste("Your first vector is longer by", abs(diff), "elements"))
+    sentence <- (paste("Your first vector is longer by", abs(diff), 
+                       "elements"))
   } else if (diff < 0) {
-    sentence <-  (paste("Your second vector is longer by", abs(diff), "elements"))
+    sentence <-  (paste("Your second vector is longer by", abs(diff), 
+                        "elements"))
   } else {
     sentence <- ("Both vectors have an equal number of elements")
   }
