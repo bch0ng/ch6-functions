@@ -32,3 +32,19 @@ DescribeDifference(c(1,2,3,4,5), c(1,2,3,4))
 ### Bonus ###
 
 # Rewrite your `DescribeDifference` function to tell you the name of the vector which is longer
+DescribeDifference2 <- function(a, b) {
+  diff <- length(a) - length(b)
+  if (diff > 0) {
+    sentence <- (paste("Your first vector", substitute(a), "is longer by", abs(diff), 
+                       "elements"))
+  } else if (diff < 0) {
+    sentence <-  (paste("Your second vector", substitute(b), "is longer by", abs(diff), 
+                        "elements"))
+  } else {
+    sentence <- paste("Both vectors", substitute(a), "and", substitute(b), "have an equal number of elements")
+  }
+  return(sentence)
+}
+lol <- c(1:5)
+lel <- c(1:5)
+DescribeDifference2(lol, lel)
